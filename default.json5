@@ -20,6 +20,18 @@
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "dependencies non-major"
+    },
+    {
+      "matchDepNames": ["java"],
+      "groupName": "java"
+    },
+    {
+      "matchDepNames": ["node"],
+      "groupName": "node"
+    },
+    {
+      "matchDepNames": ["python"],
+      "groupName": "python"
     }
   ]
 }
