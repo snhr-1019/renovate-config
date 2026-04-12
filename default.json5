@@ -20,8 +20,9 @@
       "customType": "regex",
       "fileMatch": ["\\.chezmoiexternal\\.toml$"],
       "matchStrings": [
-        "url\\s*=\\s*\"https://github\\.com/(?<depName>[^/]+/[^/]+)/releases/download/(?<currentValue>v?[\\d.]+)/"
+        "url\\s*=\\s*\"https://github\\.com/(?<depName>[^/]+/[^/]+)/releases/download/v?(?<currentValue>[\\d.]+)/[^\"]*\""
       ],
+      "extractVersionTemplate": "^v?(?<version>.+)$",
       "datasourceTemplate": "github-releases"
     }
   ],
