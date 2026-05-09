@@ -43,6 +43,23 @@
     {
       "matchDepNames": ["python"],
       "groupName": "python"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"],
+      "groupName": "devDependencies patch automerge",
+      "automerge": true,
+      "platformAutomerge": true
+    },
+    {
+      "matchManagers": ["custom.regex"],
+      "matchUpdateTypes": ["patch"],
+      "matchPackageNames": [
+        "k1LoW/mo"
+      ],
+      "groupName": "chezmoi tools patch automerge",
+      "automerge": true,
+      "platformAutomerge": true
     }
   ]
 }
