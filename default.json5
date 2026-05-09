@@ -60,6 +60,13 @@
       "groupName": "chezmoi tools patch automerge",
       "automerge": true,
       "platformAutomerge": true
+    },
+    {
+      "matchManagers": ["pre-commit"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "pre-commit hooks automerge",
+      "automerge": true,
+      "platformAutomerge": true
     }
   ]
 }
