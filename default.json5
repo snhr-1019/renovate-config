@@ -67,6 +67,13 @@
       "groupName": "pre-commit hooks automerge",
       "automerge": true,
       "platformAutomerge": true
+    },
+    {
+      "matchPackageNames": ["zenn-cli"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "zenn-cli",
+      "automerge": true,
+      "platformAutomerge": true
     }
   ]
 }
