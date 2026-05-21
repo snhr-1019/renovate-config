@@ -18,7 +18,7 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["\\.chezmoiexternal\\.toml$"],
+      "fileMatch": ["\\.chezmoiexternal\\.toml(\\.tmpl)?$"],
       "matchStrings": [
         "url\\s*=\\s*\"https://github\\.com/(?<depName>[^/]+/[^/]+)/releases/download/v?(?<currentValue>[\\d.]+)/[^\"]*\""
       ],
