@@ -30,7 +30,10 @@
     {
       "matchPackagePatterns": ["*"],
       "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "dependencies non-major"
+      "groupName": "dependencies non-major",
+      "automerge": true,
+      "platformAutomerge": true,
+      "schedule": ["at any time"]
     },
     {
       "matchDepNames": ["java"],
@@ -43,41 +46,6 @@
     {
       "matchDepNames": ["python"],
       "groupName": "python"
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch"],
-      "groupName": "devDependencies patch automerge",
-      "automerge": true,
-      "platformAutomerge": true,
-      "schedule": ["at any time"]
-    },
-    {
-      "matchManagers": ["custom.regex"],
-      "matchUpdateTypes": ["patch"],
-      "matchPackageNames": [
-        "k1LoW/mo"
-      ],
-      "groupName": "chezmoi tools patch automerge",
-      "automerge": true,
-      "platformAutomerge": true,
-      "schedule": ["at any time"]
-    },
-    {
-      "matchManagers": ["pre-commit"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "pre-commit hooks automerge",
-      "automerge": true,
-      "platformAutomerge": true,
-      "schedule": ["at any time"]
-    },
-    {
-      "matchPackageNames": ["zenn-cli"],
-      "matchUpdateTypes": ["patch", "minor"],
-      "groupName": "zenn-cli",
-      "automerge": true,
-      "platformAutomerge": true,
-      "schedule": ["at any time"]
     }
   ]
 }
