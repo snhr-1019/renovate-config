@@ -1,4 +1,13 @@
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=auto]
+
   - repo: https://github.com/renovatebot/pre-commit-hooks
     rev: 43.204.0
     hooks:
