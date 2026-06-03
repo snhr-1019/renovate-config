@@ -33,6 +33,13 @@
       "groupName": "dependencies non-major",
       "automerge": true,
       "platformAutomerge": true,
+      "schedule": ["before 6am on saturday"]
+    },
+    {
+      "matchManagers": ["custom.regex"],
+      "groupName": "custom regex",
+      "automerge": true,
+      "platformAutomerge": true,
       "schedule": ["at any time"]
     },
     {
