@@ -5,7 +5,7 @@
   ],
   "dependencyDashboard": true,
   "timezone": "Asia/Tokyo",
-  "schedule": "before 6am every day",
+  "schedule": "before 6am on saturday",
   "reviewers": [
     "@snhr-1019"
   ],
@@ -32,8 +32,7 @@
       "matchUpdateTypes": ["patch", "minor"],
       "groupName": "dependencies non-major",
       "automerge": true,
-      "platformAutomerge": true,
-      "schedule": ["before 6am on saturday"]
+      "platformAutomerge": true
     },
     {
       "matchManagers": ["custom.regex"],
