@@ -42,8 +42,12 @@
       "schedule": ["at any time"]
     },
     {
+      // mise は Corretto を独自表記 (corretto-17.0.20.10.1) で扱うが、
+      // Renovate は Amazon 公式の表記 (17.0.20+101) を書き込むため、
+      // mise が `no metadata found for version` で解決できなくなる。
+      // java は更新対象から外し、手動で更新する。
       "matchDepNames": ["java"],
-      "groupName": "java"
+      "enabled": false
     },
     {
       "matchDepNames": ["node"],
