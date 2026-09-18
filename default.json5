@@ -38,8 +38,7 @@
       "matchManagers": ["custom.regex"],
       "groupName": "custom regex",
       "automerge": true,
-      "platformAutomerge": true,
-      "schedule": ["at any time"]
+      "platformAutomerge": true
     },
     {
       // mise は Corretto を独自表記 (corretto-17.0.20.10.1) で扱うが、
