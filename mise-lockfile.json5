@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "mise.lock を週次の lock file maintenance で更新し、自動マージする",
+  "mise": {
+    // `mise lock --bump` は mise.toml を変更しないため、この PR の変更は mise.lock に限られる。
+    // 既定のスケジュール (月曜) ではなく、他の更新と同じ土曜にそろえる。
+    "lockFileMaintenance": {
+      "enabled": true,
+      "automerge": true,
+      "schedule": ["before 6am on saturday"]
+    }
+  },
+  "packageRules": [
+    {
+      // mise.lock があると latest や 24 のような指定は lock のみの更新になるが、
+      // updateType は minor / major のままで、matchUpdateTypes の lockfileUpdate にも一致しない。
+      // minor は既存の non-major グループに混ざるため、ここでは無効にして上の maintenance に集約する。
+      // 完全一致のバージョン指定は isLockfileOnly にならず、mise.toml を更新する通常の PR のまま。
+      "matchManagers": ["mise"],
+      "matchJsonata": ["isLockfileOnly = true"],
+      "enabled": false
+    }
+  ]
+}
